@@ -1,51 +1,7 @@
 Rails.application.routes.draw do
-  get 'companies_employees/index'
-
-  get 'companies_employees/show'
-
-  get 'companies_employees/new'
-
-  get 'companies_employees/create'
-
-  get 'companies_employees/edit'
-
-  get 'companies_employees/update'
-
-  get 'companies_employees/delete'
-
-  get 'companies_employees/destroy'
-
-  get 'companies/index'
-
-  get 'companies/show'
-
-  get 'companies/new'
-
-  get 'companies/create'
-
-  get 'companies/edit'
-
-  get 'companies/update'
-
-  get 'companies/delete'
-
-  get 'companies/destroy'
-
-  get 'employees/index'
-
-  get 'employees/show'
-
-  get 'employees/new'
-
-  get 'employees/create'
-
-  get 'employees/edit'
-
-  get 'employees/update'
-
-  get 'employees/delete'
-
-  get 'employees/destroy'
+  root 'employees#index'
+  match ':controller(/:action(/:id))', :via => [:get, :post]
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
