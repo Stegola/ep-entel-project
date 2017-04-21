@@ -1,2 +1,24 @@
-<h1>Employees#new</h1>
-<p>Find me in app/views/employees/new.html.erb</p>
+<h2>Add Employee</h2>
+
+<%= form_for(:employee, :url => {:action => 'create'}) do |f| %>
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <td><%= f.text_field(:name) %></td>
+  </tr>
+  <tr>
+    <th>Surname</th>
+    <td><%= f.text_field(:surname) %></td>
+  </tr>
+  <tr>
+    <th>Experience</th>
+    <td><%= f.text_field(:experience) %></td>
+  </tr>
+</table>
+
+
+<%= submit_tag("Create Employee") %>
+
+<% end %>
+
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>

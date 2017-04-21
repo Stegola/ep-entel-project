@@ -1,2 +1,23 @@
-<h1>Employees#show</h1>
-<p>Find me in app/views/employees/show.html.erb</p>
+<h2>Show Employee</h2>
+<%= link_to("<< Back to Employees", { :action => 'index'}) %>
+
+
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Experience</th>
+    <th>Company</th>
+  </tr>
+  
+  <tr>
+    <td><%= @employee.name %></td>
+    <td><%= @employee.surname %></td>
+    <td><%= @employee.experience %></td>
+    <% if !@employee.companies.last.blank? %>
+    <td><%= @employee.companies.last.name %></td>
+    <% else %>
+    <td> unemployed </td>
+    <% end %>
+  </tr>
+</table>
