@@ -14,10 +14,12 @@
     <td><%= @employee.name %></td>
     <td><%= @employee.surname %></td>
     <td><%= @employee.experience %></td>
+    
     <% if !@employee.companies.last.blank? %>
-    <td><%= @employee.companies.last.name %></td>
+      <td><%= @employee.companies.last.name %></td>
     <% else %>
-    <td> unemployed </td>
+      <td> unemployed </td>
     <% end %>
+    
   </tr>
 </table>

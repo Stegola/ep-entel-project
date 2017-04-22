@@ -17,7 +17,7 @@
       <td><%= employee.experience %></td>
       <td><%= link_to("Show", {:action => 'show', :id => employee.id} ) %></td>
       <td><%= link_to("Edit", {:action => 'edit', :id => employee.id}) %></td>
-      <td><%= link_to("Delete") %></td>
+      <td><%= link_to("Delete", {:action => 'destroy', :id => employee.id}) %></td>
     </tr>
   <% end %>
 </table>
