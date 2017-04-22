@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   
   root 'employees#index'
-  match ':controller(/:action(/:id))', :via => [:get, :post]
   
+  match ':controller(/:action(/:id))', :via => [:get, :put, :post]
+  
+  #resources :companies
+  #resources :companies_employees
+  #resources :employees
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
